@@ -124,30 +124,4 @@ chrome.extension.sendRequest({method: "getBlacklist"}, function(response) {
 	}
 
 	countNode.appendChild(gHiddenCountSpan);
-	
-	
-	//console.log("number of films = " + summary[0].childNodes[1].innerText );
-	// <span style="color:gray">(5 on this page hidden by Filmlove -- <a href="javascript:alert('hi');return false;">Show all</a>)</span> 
-	
-	// the films are film names as
-		//   	console.log("contentscript: blacklist = '" + 
-		// response.email_div_id + "'; bg_colour = '" + 
-		// response.bg_colour + "'")
-
-	// Test the text of the body element against our regular expression.
-//	var email_div = document.getElementById(response.email_div_id)
-	
-	// we found our email div
-	// if(email_div != undefined  ) {
-	// 	var is_google_com = email_div.innerText.search(/@google.com/)
-	// 	
-	// 	// Not only THAT but we found that this page is owned by google.com
-	// 	// so do our customisations
-	// 	if( is_google_com != -1 ) {
-	// 		document.body.style.background = response.bg_colour
-	// 		chrome.extension.sendRequest({method: "corpCustomisationDone"}, function(response) {})
-	// 	} else {  
-	// 		console.log( "This page is not for a google.com account, skipping")
-	// 	}
-	// }
 });
