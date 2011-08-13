@@ -1,0 +1,7 @@
+UK: Chrome Extension to hide Lovefilm movies you hate or have seen before. End up with films you actually want to watch!
+
+Filmlove is a quick hack I put together that adds the option to hide movies you never want to see again in the 'watch online' lists. Also automatically hides movies you've already given a rating too. Not affiliated in any way with Lovefilm. 
+
+http://www.thingswellmade.com/filmlove/filmlove.crx
+
+Current version uses the browser cache (specifically 'HTML5 localStorage') so will not work between computers. If there's sufficient interest, I might consider a shared storage mechanism.

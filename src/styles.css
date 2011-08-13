@@ -1,0 +1,20 @@
+/*
+Resources used to build this
+positioning: http://www.w3schools.com/CSS/css_positioning.asp
+rollover: http://www.elated.com/articles/css-rollover-buttons/
+inlining of image: http://webcodertools.com/imagetobase64converter/Create
+*/
+.go-away {
+	position:relative;
+	left:590px;
+	top:15px;
+	background-image: url(data:image/gif;base64,R0lGODlhDAAMAOZ0AP94eP9cXP+Wlv1MTO4+Pv9ZWfE8PPckJM6rq/Q8PO40NOCJieYlJf1HR6olJcsXF/MlJXk6OqWKiv+QkP+rq/9ra90nJ6uQkP93d/j4+ORISOxJSeLf3/80NP9padmFhf84ONTHx/9zc9sqKvPv7//Ozqdra/+BgcSlpaJRUaZzc59SUucyMpo7O8scHMWysv/IyPX19cooKPXz8/Dw8IEgIJ01NeWQkPtfX9fQ0M3Ly7qxsf9YWP9SUu08PObm5ufn57FXV7lBQcTBwf9QUP+uruDc3P9mZtxsbM2UlNDPz+MqKtLDw90fH6iAgKFeXtuKiv8tLfj395VEROZvb6BERP9FRe6AgNva2ujn5/5MTOElJcuSkv5bW/r6+tfMzObj482np3kcHNkhIeo2Nqd+fth8fP9TU6iEhP9oaOPj4+l+fv8/P9K9vf+Tk3w1Nf+JicmkpNw2Nt6/v////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAHQALAAAAAAMAAwAAAeHgF4oCxx0hnRMUHN0LwIwH0aGITclVzkScgIUZmBfa0VwMjs6YiMnE0hUbhguEWp0QzVjRwAAOA9vWIdKDj0eFQM2QId0CBsBXQEFGm2HSRAdDU1bWmw+YXRcByBnS1MtZGlECXFCUTwsKTQ/VQQiVkFODApPJIZZKwYWFzFlKlLEZphAkyEQADs=) no-repeat 0 0;
+}
+
+.go-away:hover {
+	background-image: url(data:image/gif;base64,R0lGODlhDAAMAOYAAI1iN41mPpFqQpZzT5dnLZdoMptbGpxiJJyIcJ1pJZ9UCJ+AcKBcGaB1PqFVB6JcE6JkKqRqMKVgEqV6R6WDW6ZlIqaGZqdjGKhYDKhpJKiRdal3Qal9TqmKaqp4RKqOcKuEVKuaiKxiH6xrG65eBa5oF65xH69lI6+PgK+fn7BiBLB6R7FcBrGqoLSKW7VrC7V1KbZnDLaegrdrB7duFbeaerermrh9N7iZd7imkbltC7ltELl2H7x5Ib2BO72ab72njr6LTr6vpL+rjr+slL+vn7+/r7+/v8GtksN9GsSSUsSfcMWGLcWzmse1ociSR8iTSsi8tMmjc8mpd8nCu8qviMq0lcq4pMq7qsuuh8y3mcy4ms2xi83As86iZs/Bqc/Pv8/Pz9CufdG/tNK+ptPMwtTOvdXBqtrMwtzUyQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAkAAGoALAAAAAAMAAwAAAeQgGlWWWdlampYW1VcX01SYlxkZmNaWWJLThobSl5TW1ZSXkEeOSEBBz5QSkpPNwcDQi0IAAw9TEw8BgIhVGo2HwcvSUkvCTJRhzUuIy86OjMmP0NqLisnLCQKDioxMC44HiLYDwUEEi873gcYJBccREATIzQlDRQQFSBNaWZIIBkROmCxQOFKmkNomlDo0CUQADs=) no-repeat 0 0;
+}
+
+.hidden-count {
+	color: gray;
+}

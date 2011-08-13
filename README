@@ -1,0 +1,9 @@
+Lovefilm as at August 2011 has a frustratingly poor search result set -- in essence it's very very poor at showing movies that you might want to watch:  It shows individual episodes of TV series It has no way of hiding titles you know you'll never want to watch It always includes movies you -have- seen  So filmlove is very simple: if you have added a rating on a film, it assumes you've seen it, so hides it from the list. Also, there's a red close box to hide other movies you don't like.
+
+This is a good example of a Chrome Extension that does the following things:
+
+- Autoupdate
+- Content script manipulation
+- Simple CSS customisations
+- HTML5 Local Storage of JSON data
+

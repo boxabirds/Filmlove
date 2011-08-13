@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+ * Copyright (c) 2010 The Chromium Authors. All rights reserved.  Use of this
+ * source code is governed by a BSD-style license that can be found in the
+ * LICENSE file.
+-->
+<html>
+  <head>
+    <script>
+	// Analytics for usage tracking
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-25112063-1']);
+	_gaq.push(['_setDomainName', 'none']);
+	_gaq.push(['_setAllowLinker', true]);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+	  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+
+	// Called when a message is passed. We assume that the content script
+	// wants to show the page action.
+	function onRequest(request, sender, sendResponse) {
+		
+		if( request.method == "getBlacklist") {
+			// stupid javascript edge case wasting everyone's lives
+			if( localStorage['blacklist'] == undefined ) {
+				sendResponse( {blacklist: {}} );
+			} else {
+				sendResponse( {blacklist: JSON.parse(localStorage['blacklist'])} );
+			}
+			// stub to test against http://www.lovefilm.com/browse/film/watch-online/subscription/p1/
+			//sendResponse( {blacklist: {"Peep Show - Series 01, Episode 06":true, "Peep Show - Series 01, Episode 03":true}});
+
+		} else if( request.method == "addToBlacklist") {
+			console.log( "Adding '" + request.film + "' to blacklist ");
+			// create a new map
+			// OMG what a mess that localStorage doesn't transparently deal with JSON.
+			var blacklist = localStorage['blacklist'];
+			if( blacklist == undefined ) {
+				blacklist = {};
+			} else {
+				blacklist = JSON.parse(blacklist);
+			}
+			blacklist[request.film] = true;
+			localStorage['blacklist'] = JSON.stringify(blacklist);			
+			sendResponse({});
+			
+		} else if( request.method == "clearBlacklist") {
+			localStorage['blacklist'] = "{}";
+			sendResponse({});
+		}
+	};
+
+	// Listen for the content script to send a message to the background page.
+	chrome.extension.onRequest.addListener(onRequest);
+    </script>
+  </head>
+</html>

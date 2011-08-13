@@ -1,0 +1,31 @@
+{
+  "name": "Filmlove",
+  "version": "1.0.3",
+  "description": "Want a list of movies you might actually want to watch? Filmlove adds option to hide movies you never want to see again in the 'watch online' lists. Also automatically hides movies you've already given a rating too. Not affiliated in any way with Lovefilm. Mail julian.harris@gmail.com for feedback or comments.",
+  "background_page": "background.html",
+//  "options_page": "options.html",
+  "page_action" :
+  {
+    "default_icon" : "icon-19.png",
+    "default_title" : "Filmlove -- Lovefilm interface enhancements"
+  },
+  "permissions" : [
+    "http://www.lovefilm.com/browse/film/watch-online/*"
+  ],
+  "content_scripts" : [
+    {
+      "matches" : [
+        "http://www.lovefilm.com/browse/film/watch-online/*"
+      ],
+      "js" : ["contentscript.js"],
+	  "css": ["styles.css"],
+      "run_at" : "document_end",
+      "all_frames" : false
+    }
+  ],
+  "icons" : {
+    "48" : "icon-48.png",
+    "128" : "icon-128.png"
+  },
+  "update_url" : "http://www.thingswellmade.com/filmlove/updates.xml"
+}
